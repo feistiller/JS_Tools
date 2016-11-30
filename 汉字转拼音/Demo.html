@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汉字转拼音</title>
+</head>
+<body>
+<div>
+    <p>汉字：</p><p id="text0">你好世界</p>
+</div>
+<div>
+    <p>拼音：</p><p id="text1"></p>
+</div>
+<div>
+    <p>拼音首字母（默认大写）：</p><p id="text2"></p>
+</div>
+
+</body>
+<script src="pinYin.js"></script>
+<script>
+    Dom0=document.getElementById('text0');
+    document.getElementById('text1').innerHTML =pinyin.getFullChars(Dom0.innerHTML);
+    document.getElementById('text2').innerHTML =pinyin.getCamelChars(Dom0.innerHTML);
+</script>
+</html>
